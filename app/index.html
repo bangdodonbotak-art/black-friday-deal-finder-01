@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Radar — Real Black Friday Deals, Checked Today</title>
+<meta name="description" content="26 real Black Friday 2026 deals, each price-checked on 27 Nov 2026 at its store, with an honest verdict on whether it is really a deal. Search and filter by category, store and discount.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f2b705'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23e63329'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <p class="brand"><span class="brand-mark" aria-hidden="true">◉</span> DEAL RADAR</p>
+    <p class="tagline">Real Black Friday prices, checked today — not last week's roundup.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-label="Featured deal">
+    <div class="hero-copy">
+      <h1>Black Friday 2026, <span>priced honestly.</span></h1>
+      <p class="hero-sub">Every deal below was found and price-checked on
+        <strong id="checked-date">27 Nov 2026</strong> at the store named.
+        Each one carries a verdict — new low, strong price, solid deal or
+        routine sale — and the source that reported the price, so you can
+        tell a real bargain from an inflated “was” price.</p>
+      <p class="hero-cta"><a href="#deals">Browse all deals ↓</a></p>
+    </div>
+    <div id="hero-deal-slot" class="hero-slot"></div>
+  </section>
+
+  <section class="stats" aria-label="Deal summary">
+    <div class="stat"><span class="stat-num" id="stat-deals">–</span><span class="stat-label">deals checked today</span></div>
+    <div class="stat"><span class="stat-num" id="stat-stores">–</span><span class="stat-label">stores</span></div>
+    <div class="stat"><span class="stat-num" id="stat-avg">–</span><span class="stat-label">average discount</span></div>
+    <div class="stat"><span class="stat-num" id="stat-saved">–</span><span class="stat-label">total savings if you bought one of each</span></div>
+    <p class="stat-biggest">Biggest single saving: <span id="stat-biggest">–</span></p>
+  </section>
+
+  <section class="controls" id="deals" aria-label="Search and filter deals">
+    <div class="search-row">
+      <label class="visually-hidden" for="search">Search deals</label>
+      <input id="search" type="search" placeholder="Search a product, brand or store — try “AirPods” or “TV”" autocomplete="off">
+    </div>
+    <div id="category-chips" class="chips" role="group" aria-label="Filter by category"></div>
+    <div class="select-row">
+      <label>Store
+        <select id="store-filter"></select>
+      </label>
+      <label>Minimum discount
+        <select id="discount-filter">
+          <option value="0">Any discount</option>
+          <option value="25">25% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort-select"></select>
+      </label>
+    </div>
+    <p id="result-count" class="result-count" aria-live="polite"></p>
+  </section>
+
+  <section id="deal-grid" class="deal-grid" aria-label="Deals"></section>
+
+  <section class="method" aria-label="How deals are checked">
+    <h2>How a deal earns its verdict</h2>
+    <ol class="verdict-key">
+      <li><span class="verdict-badge">NEW LOW</span> The lowest price the reporting sources have ever tracked for this product.</li>
+      <li><span class="verdict-badge">STRONG PRICE</span> A deep cut — roughly 40% or more, or hundreds of dollars off — with the price confirmed today.</li>
+      <li><span class="verdict-badge">SOLID DEAL</span> A real saving, but a price that comes back most sale seasons. Buy it if you need it now.</li>
+      <li><span class="verdict-badge">ROUTINE SALE</span> A small cut. Only worth it if you were buying it anyway.</li>
+    </ol>
+    <p class="method-note">Prices move all day on Black Friday. Every price here was read on
+      27 Nov 2026 from the source named on the deal card — always check the
+      price at checkout before you buy, and treat any “was” price as a guide:
+      some list prices are rarely what anyone actually pays.</p>
+    <h3>Sources checked today</h3>
+    <ul id="source-list" class="source-list"></ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Deal Radar — an independent deal finder. Prices and availability change;
+      verify at the store before buying. Store links go to the store's own
+      listing for the named product. Not affiliated with any store named here.</p>
+  </div>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
